@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Fira+Sans+Extra+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poiret+One&family=Sofia+Sans+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap');* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat";
+  font-size: 1.1rem;
+  padding: 10px;
+  background: #ffffff;
+  margin-right:auto;
+  margin-left:auto;
+  margin-top:10px; 
+}
+
+p {
+  line-height: 1.3em;
+}
+/* */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: #393939;
+  color: white;
+  border-radius: 15px;
+}
+.header h1 {
+  font-size: 40px;
+  display: inline-block;
+}
+.header img {
+  width: 9%;
+  vertical-align:middle;
+}
+
+
+/* Верхняя панель */
+.topnav {
+  overflow: hidden;
+  background-color: #849561;
+  margin-top: 20px;
+  border-radius: 15px;
+}
+
+/* Кнопочки */
+.topnav a {
+  float: left;
+  display: block;
+  color: #ffffff;;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  
+}
+.topnav a:hover {
+  background-color: #393939;
+  color: #f2f2f2;
+}
+
+
+/* Контент */
+.column {   
+  width: 100%;
+  background-color: #ffffff;
+}
+.card {
+  background-color: #393939;
+  padding: 25px;
+  margin-top: 20px;
+  color:white;
+  border-radius: 15px;
+}
+.card img {
+  width: 80%;
+  float: center;
+  margin: 10px;
+  border-radius: 15px;
+}
+
+.card table {
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid #ffffff;
+  padding: 8px;
+  text-align: left;
+  box-shadow: 0 2px 8px 0 rgba(255, 255, 255, 0.2); 
+}
+th {
+  width: 36%;
+}
+
+/* Ученики на 2 */
+.pupil-text {
+  text-align: center; 
+}
+.pupil {
+  box-shadow: 0 2px 8px 0 rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  text-align: center;
+  width: 300px;
+  margin-top: 60px;
+  padding: 10px;
+  display: inline-block;
+  margin: 10px;
+}
+
+/* Картинка на 3 */
+.img-3 {
+  width: 24%;
+  float: right;
+  margin: 10px;
+}
+
+.img-4 {
+  box-shadow: 0 2px 8px 0 rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  text-align: center;
+  width: 28%;
+  margin-top: 60px;
+  padding: 10px;
+  display: inline-block;
+  margin: 10px;
+}
+.img-4 {
+  float: right;
+}
+
+.img-5 {
+  width: 30%;
+  float: right;
+  margin: 10px;
+}
+/* Нижний колонтитул */
+.footer {
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 10px;
+  background-color: #849561;
+  color:white;
+  border-radius: 15px;
+}
+
+/* Слайдер на главной */
+.slider {
+  width: 55%;
+  max-width: 800px;
+  float: right;
+  position: relative;
+  margin: 5px;
+}
+.slide {
+  display: none;
+}
+.slide img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0 2px 8px 0 rgba(255, 255, 255, 0.2);
+}
+.active {
+  display: block;
+}
+.indicators {
+  text-align: center;
+  margin-top: 5px;
+}
+.dot {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  margin: 5px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.dot.active {
+  background-color: #849561;
+}
+
+/* Анимации на 6 */
+.class {
+  box-shadow: 0 2px 8px 0 rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  text-align: center;
+  width: 300px;
+  margin-top: 60px;
+  padding: 10px;
+  display: inline-block;
+  margin: 10px;
+  position: relative;
+}
+.class-text {
+  text-align: center; 
+}
+.class img {
+  transition: all 0.4s ease;
+}
+.effect-name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: opacity 0.3s ease;
+}
+.class:hover .effect-name {
+  opacity: 1;
+}
+
+.class:nth-child(1):hover img {
+  transform: scaleX(1.2);
+}
+.class:nth-child(1) .effect-name::before {
+  content: "1. Искажение по горизонтали"; 
+}
+
+.class:nth-child(2):hover img {
+  transform: scaleY(1.2);
+}
+.class:nth-child(2) .effect-name::before {
+  content: "2. Искажение по вертикали"; 
+}
+
+.class:nth-child(3):hover img {
+  opacity: 0;
+}
+.class:nth-child(3) .effect-name::before {
+  content: "3. Выцветание"; 
+}
+
+.class:nth-child(4):hover img {
+  filter: blur(5px);
+}
+.class:nth-child(4) .effect-name::before {
+  content: "4. Размытие"; 
+}
+
+.class:nth-child(5):hover img {
+  opacity: 0.5;
+}
+.class:nth-child(5) .effect-name::before {
+  content: "5. Полупрозрачность"; 
+}
+
+.class:nth-child(6):hover img {
+  transform: rotate(360deg);
+}
+.class:nth-child(6) .effect-name::before {
+  content: "6. Поворот"; 
+}
+
+.class:nth-child(7):hover img {
+  filter: invert(100%);
+}
+.class:nth-child(7) .effect-name::before {
+  content: "7. Инверсия"; 
+}
+
+.class:nth-child(8):hover img {
+  transform: scaleX(1.2) rotate(180deg);
+}
+.class:nth-child(8) .effect-name::before {
+  content: "8. Искажение + Поворот"; 
+}
+
+.class:nth-child(9):hover img {
+  filter: blur(3px) grayscale(100%); 
+}
+.class:nth-child(9) .effect-name::before {
+  content: "9. Размытие + Серый"; 
+}
+
+@media (max-width: 768px) {
+  .card img, .card table, .slider, .slide img {
+    width: 100%; 
+  }
+  .class, .class img, .pupil, .pupil img {
+    width: 50%;
+  }
+  .img-4, .img-5 {
+    width: 40%; 
+  }
+  .img-3 {
+    width: 30%; 
+  }
+}
+@media (max-width: 320px) {
+  .card img, .card table, .slider, .slide img {
+    width: 100%; 
+  }
+  .class, .class img, .pupil, .pupil img {
+    width: 50%;
+  }
+  .img-4, .img-5 {
+    width: 40%; 
+  }
+  .img-3 {
+    width: 30%; 
+  }
+}
